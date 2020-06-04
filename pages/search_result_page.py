@@ -24,5 +24,5 @@ class AmazonSearchResultPage:
         search_input = self.browser.find_element(*self.SEARCH_FIELD)
         search_input.send_keys(item + Keys.RETURN)
 
-    def check_title(self):
+    def verify_title(self):
         assert self.browser.title == self.PAGE_TITLE

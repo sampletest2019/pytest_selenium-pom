@@ -14,10 +14,10 @@ def test_search_airmax(browser):
     home_page.load_page()
 
     # verify that web page title is Amazon.com
-    home_page.check_title()
+    home_page.verify_title()
 
     # search for Nike Air Max
     home_page.search_item(search_item)
 
     # verify that web page title contains Nike Air Max
-    search_result_page.check_title()
+    search_result_page.verify_title()

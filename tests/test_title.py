@@ -1,11 +1,11 @@
-import pytest
-from selenium import webdriver
+from pytest_selenium_simple.pages.home_page import AmazonHomePage
 
-def test_title(browser_setup):
-    expected_title = 'Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more'
-    base_url = 'https://www.amazon.com'
-    search_title = 'Amazon.com: nike air max'
-    # navigate to Amazon.com home page
-    browser.get(base_url)
-    # verify that website title is Amazon.com
-    assert browser.title == expected_title
+
+def test_amazon_title(browser):
+    home_page = AmazonHomePage(browser)
+
+    # navigate to Amazon home page
+    home_page.load_page()
+
+    # verify Amazon home page title is matching expected title
+    home_page.verify_title()
