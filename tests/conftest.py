@@ -14,7 +14,7 @@ def browser():
         browser = webdriver.Chrome("../resources/chromedriver_linux_83")
     else:
         raise Exception("chromedriver is not configured for your Operation System! "
-                        "Your Operating System is: {}". format(platform.platform()))
+                        "Your Operating System is: {}".format(platform.platform()))
 
     # wait 10 seconds to pull the DOM
     browser.implicitly_wait(10)
