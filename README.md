@@ -1,4 +1,4 @@
-# pytest_selenium-pom
+# pytest_selenium_pom
 
 This is a simple example of test scripts written using **Python**, **Selenium WebDriver**, **PyTest**
 and **Allure**. 
