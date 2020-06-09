@@ -1,10 +1,8 @@
+import pytest
 from pytest_selenium_simple.pages.home_page import AmazonHomePage
 from pytest_selenium_simple.pages.search_result_page import AmazonSearchResultPage
 
-expected_title = 'Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more'
-search_title = 'Amazon.com : nike air max'
-
-
+@pytest.mark.regressiontest
 def test_search_airmax(browser):
     home_page = AmazonHomePage(browser)
     search_result_page = AmazonSearchResultPage(browser)
@@ -15,9 +13,9 @@ def test_search_airmax(browser):
 
     # verify that web page title is Amazon.com
     home_page.verify_title()
-
+ 
     # search for Nike Air Max
     home_page.search_item(search_item)
 
     # verify that web page title contains Nike Air Max
-    search_result_page.verify_title()
+    search_result_page.verify_title(search_item)

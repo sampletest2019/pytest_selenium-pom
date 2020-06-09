@@ -9,7 +9,7 @@ class AmazonSearchResultPage:
 
     # URL and page title
     URL = 'https://www.amazon.com/s?k=nike+air+max&ref=nb_sb_noss'
-    PAGE_TITLE = 'Amazon.com : nike air max'
+    PAGE_TITLE = 'Amazon.com : '
 
     # Element Locators
     SEARCH_FIELD = (By.ID, "twotabsearchtextbox")
@@ -24,5 +24,6 @@ class AmazonSearchResultPage:
         search_input = self.browser.find_element(*self.SEARCH_FIELD)
         search_input.send_keys(item + Keys.RETURN)
 
-    def verify_title(self):
-        assert self.browser.title == self.PAGE_TITLE
+    def verify_title(self, item):
+        assert self.browser.title == self.PAGE_TITLE + item
+
