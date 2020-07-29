@@ -5,7 +5,6 @@ from selenium import webdriver
 
 @pytest.fixture()
 def browser():
-    print(platform.platform())
     chrome_version_win = "84"
     chrome_version_mac = "84"
     chrome_version_linux = "84"
