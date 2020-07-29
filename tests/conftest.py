@@ -7,9 +7,9 @@ from selenium import webdriver
 def browser():
 
     if 'Win' in platform.platform():
-        browser = webdriver.Chrome("../resources/chromedriver_83.exe")
-    elif 'Mac' in platform.platform():
-        browser = webdriver.Chrome("../resources/chromedriver_mac_83.exe")
+        browser = webdriver.Chrome("../resources/chromedriver_win_83.exe")
+    elif 'Darwin' in platform.platform():
+        browser = webdriver.Chrome("../resources/chromedriver_mac_83")
     elif "Linux" in platform.platform():
         browser = webdriver.Chrome("../resources/chromedriver_linux_83")
     else:
