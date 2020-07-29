@@ -1,5 +1,5 @@
 import pytest
-from pytest_selenium_simple.pages.home_page import AmazonHomePage
+from pages.home_page import AmazonHomePage
 
 @pytest.mark.smoketest
 def test_amazon_title(browser):

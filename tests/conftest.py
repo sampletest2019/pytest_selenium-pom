@@ -6,12 +6,16 @@ from selenium import webdriver
 @pytest.fixture()
 def browser():
 
+    chrome_version_win = '84'
+    chrome_version_mac = '84'
+    chrome_version_linux = '84'
+
     if 'Win' in platform.platform():
-        browser = webdriver.Chrome("../resources/chromedriver_win_83.exe")
+        browser = webdriver.Chrome("../resources/chromedriver_win_{{chrome_version_win}}.exe")
     elif 'Darwin' in platform.platform():
-        browser = webdriver.Chrome("../resources/chromedriver_mac_83")
+        browser = webdriver.Chrome("../resources/chromedriver_mac_{{chrome_version_mac}}")
     elif "Linux" in platform.platform():
-        browser = webdriver.Chrome("../resources/chromedriver_linux_83")
+        browser = webdriver.Chrome("../resources/chromedriver_linux_{{chrome_version_linux}}")
     else:
         raise Exception("chromedriver is not configured for your Operation System! "
                         "Your Operating System is: {}".format(platform.platform()))

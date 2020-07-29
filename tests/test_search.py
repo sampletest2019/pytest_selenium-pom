@@ -1,6 +1,6 @@
 import pytest
-from pytest_selenium_simple.pages.home_page import AmazonHomePage
-from pytest_selenium_simple.pages.search_result_page import AmazonSearchResultPage
+from pages.home_page import AmazonHomePage
+from pages.search_result_page import AmazonSearchResultPage
 
 @pytest.mark.regressiontest
 def test_search_airmax(browser):
