@@ -1,6 +1,8 @@
 import platform
 import pytest
 from selenium import webdriver
+import allure
+from allure_commons.types import AttachmentType
 
 
 @pytest.fixture()
@@ -26,5 +28,7 @@ def browser():
     # maximize browser window to full screen
     browser.maximize_window()
     yield browser
+    # make a screenshot before closing the browser
+    allure.attach(browser.get_screenshot_as_png(), name="Screenshot", attachment_type=AttachmentType.PNG)
     # when test is done, close ALL windows of the browser
     browser.quit()

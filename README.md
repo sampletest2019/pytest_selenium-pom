@@ -14,29 +14,19 @@ Please make sure you have **Python** installed https://www.python.org/downloads/
 
 Please make sure you have **PyCharm** installed https://www.jetbrains.com/pycharm/download/
 
-To install necessary package using **PyCharm** (on **Windows 10**):
+Please make sure you have **Git** installed https://git-scm.com/downloads
 
-1. Open your project in **PyCharm**.
-2. Click on **File -> Settings**.
-3. In the search field type in **Interpreter**.
-4. In the new window, click on **+** sign to add new packages.
-5. Type in **selenium** and click on **Install Package**.
-6. Type in **pytest** and click on **Install Package**.
-7. Type in **allure-pytest** and click on **Install Package**.
-7. Close Packages and Settings windows.
+1. Open your PyCharm
+2. Navigate to VCS - Git - Clone and paste repository URL 
+3. Select "New Window" option.
+4. Click on "Terminal" at the bottom of the page
+5a. For Windows users, type in **pip install pipenv** and press Enter
+5b. For mac OS users, type in **pip3 install pipenv** and press Enter
+6. Type in **pipenv install selenium** and press Enter
+7. Type in **pipenv install pytest** and press Enter
+8. Type in **pipenv install allure-pytest** and press Enter
 
-Navigate to **tests** folder.
+Navigate to "Edit Configurations.." at the top right of the PyCharm
 
-You can run your test via terminal. 
-Type **pytest -v filename** or **pytest -v** to run all tests in the folder and press Enter
-
-You can run specific test groups (smoke, regression and etc) from command line. 
-Type in **pytest -v -m smoketest** and press Enter
-
-To run it via command line and generate Allure reports from command line:
-Type in **py.test --alluredir=reports** and press Enter
-
-To view your reports:
-Type in **allure serve reports** and press Enter.
 Reports will open in your default browser (I recommend Firefox or Chrome).
 
