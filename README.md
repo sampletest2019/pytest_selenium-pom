@@ -16,15 +16,33 @@ Please make sure you have **PyCharm** installed https://www.jetbrains.com/pychar
 
 Please make sure you have **Git** installed https://git-scm.com/downloads
 
+Please make sure you have **Allure** installed https://git-scm.com/downloads
+
+For Windows users:
+1. Install scoop https://scoop.sh/
+2. Execute **scoop install allure** in the powershell
+
+For mac OS users:
+1. Install Homebrew https://brew.sh/
+2. Execute **brew install allure** in the terminal
+
+mac OS users: 
+Please make sure you have **pip** installed https://pip.pypa.io/en/stable/installing/
+1. Right click on get-pip.py and select "save link as". Save get-pip.py somewhere on your computer (for example Downloads folder)
+2. Open terminal, navigate to Downloads folder (cd Downloads) and execute **python3 get-pip.py**
+
+
+**How to run your tests:**
+ 
 1. Open your PyCharm
 2. Navigate to VCS - Git - Clone and paste repository URL 
 3. Select "New Window" option.
 4. Click on "Terminal" at the bottom of the page
-5a. For Windows users, type in **pip install pipenv** and press Enter
-5b. For mac OS users, type in **pip3 install pipenv** and press Enter
-6. Type in **pipenv install selenium** and press Enter
-7. Type in **pipenv install pytest** and press Enter
-8. Type in **pipenv install allure-pytest** and press Enter
+5. For Windows users, type in **pip install pipenv** and press Enter
+6. For mac OS users, type in **pip3 install pipenv** and press Enter
+7. Type in **pipenv install selenium** and press Enter
+8. Type in **pipenv install pytest** and press Enter
+9. Type in **pipenv install allure-pytest** and press Enter
 
 Navigate to "Edit Configurations.." at the top right of the PyCharm
 
@@ -36,11 +54,14 @@ Your configuration should look similar to this one (use smoketest OR regressiont
 
 [![Screen-Shot-2020-09-10-at-5-28-23-PM.png](https://i.postimg.cc/d3mfRysK/Screen-Shot-2020-09-10-at-5-28-23-PM.png)](https://postimg.cc/Zvnj40vf)
 
-After you will run your test(s). To execute report add shell script to Run Configuration similar to below:
+After you will run your test(s). 
+To generate Allure reports and open them in the browser:
+
+Windows users please do right click on run_reports_win.bat and run
+mac OS users please do right click on run_reports_mac.sh and run
 
 It will automatically execute "allure serve reports" command and your Allure Report will open in the default browser
 
 [![Screen-Shot-2020-09-10-at-5-30-20-PM.png](https://i.postimg.cc/CLrN3N6Q/Screen-Shot-2020-09-10-at-5-30-20-PM.png)](https://postimg.cc/kB8K8xCQ)
 
 To stop executing "allure serve reports" command, press Ctrl + C in your PyCharm terminal.
-
