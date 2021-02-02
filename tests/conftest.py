@@ -7,9 +7,9 @@ from allure_commons.types import AttachmentType
 
 @pytest.fixture()
 def browser():
-    chrome_version_win = "85"
-    chrome_version_mac = "85"
-    chrome_version_linux = "85"
+    chrome_version_win = "88"
+    chrome_version_mac = "88"
+    chrome_version_linux = "88"
 
     if 'Win' in platform.platform():
         browser = webdriver.Chrome("../resources/chromedriver_win_{}.exe".format(chrome_version_win))
