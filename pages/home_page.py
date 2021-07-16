@@ -15,7 +15,7 @@ class AmazonHomePage:
 
     # URL and page title
     URL = 'https://www.amazon.com'
-    PAGE_TITLE = 'Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more'
+    PAGE_TITLE = 'Amazon.com. Spend less. Smile more.'
 
     # Element Locators
     SEARCH_FIELD = (By.ID, "twotabsearchtextbox")
